@@ -1,17 +1,16 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom'
 
-import TasksPage from "./pages/TasksPage";
-import TaskForm from "./pages/TaskForm";
-import NotFound from "./pages/NotFound";
-import { TaskContextProvider } from "./context/TaskProvider";
-
-import Navbar from "./components/Navbar";
+import TasksPage from './pages/TasksPage'
+import TaskForm from './pages/TaskForm'
+import NotFound from './pages/NotFound'
+import { TaskContextProvider } from './context/TaskProvider'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <div className="bg-zinc-900 h-screen">
+    <div className="">
       <Navbar />
-      <div className="container mx-auto py-4 px-20">
+      <div className="">
         <TaskContextProvider>
           <Routes>
             <Route path="/" element={<TasksPage />} />
@@ -22,7 +21,7 @@ function App() {
         </TaskContextProvider>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
